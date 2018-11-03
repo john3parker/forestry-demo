@@ -80,4 +80,5 @@ fields:
   hidden: true
   default: home
 pages:
+- board.md
 - index.md

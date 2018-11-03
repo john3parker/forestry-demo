@@ -1,0 +1,14 @@
+---
+label: board-of-directors
+hide_body: false
+is_partial: false
+fields:
+- type: text
+  name: name
+  label: Name
+- type: textarea
+  name: description
+  label: Description
+- type: file
+  name: image
+  description: Image

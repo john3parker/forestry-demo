@@ -80,5 +80,4 @@ fields:
   hidden: true
   default: home
 pages:
-- board-of-directors.md
 - index.md

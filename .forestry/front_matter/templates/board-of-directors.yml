@@ -15,5 +15,3 @@ fields:
   config:
     required: true
   default: board-of-directors
-pages:
-- _board/bryan-and-tara-riley.md

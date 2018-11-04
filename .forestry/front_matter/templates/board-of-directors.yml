@@ -14,6 +14,9 @@ fields:
   description: Image
 - type: text
   name: layout
-  label: layout
+  label: Layout
+  config:
+    required: true
+  default: board-of-directors
 pages:
 - _board/bryan-and-tara-riley.md

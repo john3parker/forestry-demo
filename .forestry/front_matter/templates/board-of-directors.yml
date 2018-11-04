@@ -6,9 +6,6 @@ fields:
 - type: text
   name: name
   label: Name
-- type: textarea
-  name: description
-  label: Description
 - type: file
   name: image
   description: Image

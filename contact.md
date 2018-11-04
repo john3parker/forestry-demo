@@ -16,6 +16,9 @@ services:
 - heading: Mail a Donation
   description: Priority Bank FJ Ministries 3401 E. Mission Blvd Fayetteville, AR 72703
   icon: ''
+hero_button:
+  text: Hero Button goes here
+  href: http://www.paypal.com
 menu:
   navigation:
     identifier: _contact

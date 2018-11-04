@@ -36,11 +36,11 @@ Fayetteville, AR 72703
 
 ## PayPal
 
-<form style="display: flex; justify-content: center;" action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top"><input name="cmd" type="hidden" value="_s-xclick"><br>
+<form style="display: flex; justify-content: left;" action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top"><input name="cmd" type="hidden" value="_s-xclick"><br>
 
 <input name="hosted_button_id" type="hidden" value="KKHC5KC5QCR7Q"><br>
 
-<input alt="PayPal - The safer, easier way to pay online!" name="submit" src="./give_files/btn_donateCC_LG.gif" type="image"><br>
+<input alt="PayPal - The safer, easier way to pay online!" name="submit" src="https://moneypantry.com/wp-content/uploads/2013/11/paypal-donate-button.jpg" type="image"><br>
 
 <img src="./give_files/pixel.gif" alt="" width="1" height="1" border="0"></form>
 

@@ -6,13 +6,6 @@ webhook_url:
 sections:
 - type: heading
   label: Content
-- type: directory
-  path: _board
-  label: Board of Directors
-  create: all
-  match: "*"
-  templates:
-  - board-of-directors
 - type: jekyll-posts
   label: Posts
   create: all

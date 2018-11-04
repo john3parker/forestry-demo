@@ -4,6 +4,7 @@ banner_image: "/uploads/2018/11/04/cropped-riley-family.jpg"
 layout: landing-page
 heading: FJ Ministries
 partners:
+- "/uploads/2018/11/04/university-of-the-nations.jpeg"
 - "/uploads/2017/11/13/stem.png"
 - "/uploads/2017/11/13/UPenn_logo.png"
 - "/uploads/2017/11/13/nysed.png"
@@ -20,7 +21,7 @@ services:
   heading: Family Discipleship Training School
   icon: "/uploads/2018/11/04/familyDTS_button.jpg"
 sub_heading: Youth With A Mission (YWAM)
-textline: Family Discipleship Training School
+textline: FJ Ministry Programs
 hero_button:
   text: Learn more
   href: "/about"

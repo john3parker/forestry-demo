@@ -12,5 +12,8 @@ fields:
 - type: file
   name: image
   description: Image
+- type: text
+  name: layout
+  label: layout
 pages:
 - _board/bryan-and-tara-riley.md

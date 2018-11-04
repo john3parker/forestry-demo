@@ -1,18 +1,16 @@
 ---
-title: Grady Nerio
+title: Bryan and Tara Riley
 date: 2017-11-14 10:00:44 +0000
 role:
 - partner
 - board
-thumbnail: "/uploads/2017/11/14/filipe-almeida-192048 (1).jpg"
+thumbnail: "/uploads/2018/11/04/bryan-tara.png"
 sub_heading: Head of Board
-email: grady@belkirkcollege.com
+email: bwriley4@yahoo.com
 linkedin: ''
-layout: 'person'
+layout: person
+
 ---
+Bryan served as a corporate attorney for 9 years and as an attorney for 10 years before following God’s call into the ministry.
 
-Grady Nerio joined the Belkirk Board in 2015.
-
-Grady received his Ph.D in Mechanical Engineering from Stanford in 1978, and has worked with prestigious companies such as Boeing and Lockheed Martin.
-
-Nulla vitae elit libero, a pharetra augue. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Nullam quis risus eget urna mollis ornare vel eu leo. Cras mattis consectetur purus sit amet fermentum. Aenean lacinia bibendum nulla sed consectetur.
+Tara has worked with disabled children, their teachers, and their parents for 10 years in the school systems as a pediatric occupational therapist, enabling the children to access more completely their education.

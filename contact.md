@@ -7,6 +7,9 @@ publish_date: 2017-12-01 04:00:00 +0000
 show_staff: false
 textline: description goes here
 services:
+- heading: Stripe
+  description: Donate via credit card
+  icon: ''
 - heading: PayPal
   description: Give with PayPal
   icon: ''

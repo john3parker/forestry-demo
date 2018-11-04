@@ -13,8 +13,10 @@ services:
     to make Him known.
   heading: Youth With A Mission
   icon: "/uploads/2018/11/04/YWAM-Logo-Square.gif"
-- description: Performing collaborative research and providing services to support
-    the biotechnology sector.
+- description: The Discipleship Training School (DTS) is YWAM’s five to six month
+    entry level course, embodying YWAM’s mission to know God and make Him known. DTS
+    provides an environment for students to personally encounter Jesus Christ, learn
+    to hear God’s voice, and respond with joy!
   heading: Family Discipleship Training School
   icon: "/uploads/2018/11/04/familyDTS_button.jpg"
 sub_heading: Youth With A Mission (YWAM)

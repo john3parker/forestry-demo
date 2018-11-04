@@ -25,12 +25,23 @@ menu:
     weight: 5
 
 ---
-## Hours of Operation
-Belkirk College of Engineering is available:
+## Give
 
-- **Monday-Friday**, 8:00am to 6:00pm EST
-- **Saturdays**, 8:00am to 5:00pm EST
-- **Sundays**, 9:00am to 12:00pm EST
+Make checks payable to FJ MInistries
 
-## Contact Information
+**Priority Bank**  
+FJ Ministries  
+3401 E. Mission Blvd  
+Fayetteville, AR 72703
+
+## PayPal
+
+<form style="display: flex; justify-content: center;" action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top"><input name="cmd" type="hidden" value="_s-xclick"><br>
+
+<input name="hosted_button_id" type="hidden" value="KKHC5KC5QCR7Q"><br>
+
+<input alt="PayPal - The safer, easier way to pay online!" name="submit" src="./give_files/btn_donateCC_LG.gif" type="image"><br>
+
+<img src="./give_files/pixel.gif" alt="" width="1" height="1" border="0"></form>
+
 {% include address.html %}

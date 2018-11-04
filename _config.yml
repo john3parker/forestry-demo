@@ -1,6 +1,6 @@
-title: Belkirk College of Engineering
-short_title: Belkirk
-description: Belkirk Demo Site for Forestry.io
+title: FJ Ministries
+short_title: FJ Ministries
+description: FJ Ministries YWAM Site with Family DTS
 baseurl:
 permalink: "/:path/"
 defaults:

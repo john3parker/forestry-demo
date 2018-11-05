@@ -38,7 +38,6 @@ Fayetteville, AR 72703
   <script
     src="https://checkout.stripe.com/checkout.js" class="stripe-button"
     data-key="pk_test_TYooMQauvdEDq54NiTphI7jx"
-    data-amount="50000"
     data-name="FJ Ministries"
     data-description="Donation"
     data-image="https://stripe.com/img/documentation/checkout/marketplace.png"

@@ -32,7 +32,7 @@ Fayetteville, AR 72703
 
 ''Make checks payable to FJ MInistries''
 
-## Stripe v2
+## Stripe v3
 
 <form action="https://pmvruqtzuf.execute-api.us-east-1.amazonaws.com/prod/" method="POST">
   <script

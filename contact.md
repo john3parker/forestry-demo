@@ -38,15 +38,15 @@ Fayetteville, AR 72703
   <script
     src="https://checkout.stripe.com/checkout.js" class="stripe-button"
     data-key="pk_test_TYooMQauvdEDq54NiTphI7jx"
-    xdata-amount="999"
-    data-name="Stripe.com"
-    data-description="Example charge"
+    data-amount="50000"
+    data-name="FJ Ministries"
+    data-description="Donation"
     data-image="https://stripe.com/img/documentation/checkout/marketplace.png"
     data-locale="auto"
     data-zip-code="true">
   </script>
-  <form type="hidden" name="amount"/>
-  <form type="hidden" name="currency"/>
+  <form type="hidden" name="amount" value="50000"/>
+  <form type="hidden" name="currency" value="usd"/>
 </form>
 
 

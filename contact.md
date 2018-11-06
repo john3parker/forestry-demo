@@ -72,7 +72,6 @@ var dialog;
 function addUser() {
   dialog.dialog('close');
 }
-  
  $(document).ready(function() {
    dialog = dialog = $( "#dialog-form" ).dialog({
       autoOpen: false,
@@ -94,7 +93,6 @@ function addUser() {
      dialog.dialog('show');
    });
  });
-  
  </script>
 
 <form action="https://pmvruqtzuf.execute-api.us-east-1.amazonaws.com/prod/" method="POST">

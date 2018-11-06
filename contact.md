@@ -90,7 +90,7 @@ function addUser() {
       }
     });
    $('#btnDonate').click(function() {
-     dialog.dialog('show');
+     dialog.dialog('open');
    });
  });
  </script>

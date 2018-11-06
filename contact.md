@@ -32,12 +32,20 @@ Fayetteville, AR 72703
 
 ''Make checks payable to FJ MInistries''
 
-## Stripe v3
+## Stripe v4
+
+<button id="btnDonate" onClick="clickHandler">click me</button>
+<script>
+  function clickHandler() {
+    alert('you clicked me');
+  }
+  </script>
 
 <form action="https://pmvruqtzuf.execute-api.us-east-1.amazonaws.com/prod/" method="POST">
   <script
     src="https://checkout.stripe.com/checkout.js" class="stripe-button"
     data-key="pk_test_TYooMQauvdEDq54NiTphI7jx"
+    data-amount="50000"
     data-name="FJ Ministries"
     data-description="Donation"
     data-image="https://stripe.com/img/documentation/checkout/marketplace.png"

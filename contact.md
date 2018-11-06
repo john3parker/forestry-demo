@@ -68,8 +68,13 @@ Fayetteville, AR 72703
 
 <button id="btnDonate">click me</button>
 <script>
+var dialog;
+function addUser() {
+  dialog.dialog('close');
+}
+  
  $(document).ready(function() {
-   var dialog = dialog = $( "#dialog-form" ).dialog({
+   dialog = dialog = $( "#dialog-form" ).dialog({
       autoOpen: false,
       height: 400,
       width: 350,

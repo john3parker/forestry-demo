@@ -34,12 +34,21 @@ Fayetteville, AR 72703
 
 ## Stripe v4
 
-<button id="btnDonate" onClick="clickHandler">click me</button>
+<script
+  src="https://code.jquery.com/jquery-3.3.1.min.js"
+  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+  crossorigin="anonymous"></script>
+ 
+
+<button id="btnDonate">click me</button>
 <script>
-  function clickHandler() {
-    alert('you clicked me');
-  }
-  </script>
+ $(document).ready(function() {
+   $('#btnDonate').click(function() {
+     alert('you clicked me');
+   });
+ });
+  
+ </script>
 
 <form action="https://pmvruqtzuf.execute-api.us-east-1.amazonaws.com/prod/" method="POST">
   <script

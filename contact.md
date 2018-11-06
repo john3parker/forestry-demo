@@ -38,13 +38,55 @@ Fayetteville, AR 72703
   src="https://code.jquery.com/jquery-3.3.1.min.js"
   integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
   crossorigin="anonymous"></script>
+<script
+  src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"
+  integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU="
+  crossorigin="anonymous"></script>
+<script
+  src="https://code.jquery.com/ui/1.11.4/jquery-ui.min.js"
+  integrity="sha256-xNjb53/rY+WmG+4L6tTl9m6PpqknWZvRt0rO1SRnJzw="
+  crossorigin="anonymous"></script>
+
+<div id="dialog-form" title="Create new user">
+  <p class="validateTips">All form fields are required.</p>
  
+  <form>
+    <fieldset>
+      <label for="name">Name</label>
+      <input type="text" name="name" id="name" value="Jane Smith" class="text ui-widget-content ui-corner-all">
+      <label for="email">Email</label>
+      <input type="text" name="email" id="email" value="jane@smith.com" class="text ui-widget-content ui-corner-all">
+      <label for="password">Password</label>
+      <input type="password" name="password" id="password" value="xxxxxxx" class="text ui-widget-content ui-corner-all">
+ 
+      <!-- Allow form submission with keyboard without duplicating the dialog button -->
+      <input type="submit" tabindex="-1" style="position:absolute; top:-1000px">
+    </fieldset>
+  </form>
+</div>
+
 
 <button id="btnDonate">click me</button>
 <script>
  $(document).ready(function() {
+   var dialog = dialog = $( "#dialog-form" ).dialog({
+      autoOpen: false,
+      height: 400,
+      width: 350,
+      modal: true,
+      buttons: {
+        "Create an account": addUser,
+        Cancel: function() {
+          dialog.dialog( "close" );
+        }
+      },
+      close: function() {
+        form[ 0 ].reset();
+        allFields.removeClass( "ui-state-error" );
+      }
+    });
    $('#btnDonate').click(function() {
-     alert('you clicked me');
+     dialog.dialog('show');
    });
  });
   

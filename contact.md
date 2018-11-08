@@ -36,7 +36,7 @@ _Make checks payable to FJ MInistries_
 
 ## Stripe v5
 
-{% include donation.html %}
+{% include donation.html %} 
 
 ## Correspondence
 

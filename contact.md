@@ -9,7 +9,7 @@ textline: More ways to give
 services: []
 hero_button:
   text: Donate
-  href: "/#pages/contact-md/#stripe"
+  href: "#stripe"
 menu:
   navigation:
     identifier: _contact

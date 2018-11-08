@@ -8,8 +8,8 @@ show_staff: false
 textline: More ways to give
 services: []
 hero_button:
-  text: ''
-  href: ''
+  text: Donate
+  href: "/#pages/contact-md/#stripe"
 menu:
   navigation:
     identifier: _contact

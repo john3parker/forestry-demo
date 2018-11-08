@@ -26,6 +26,7 @@ menu:
 
 ---
 ## Priority Bank
+
 FJ Ministries  
 3401 E. Mission Blvd  
 Fayetteville, AR 72703
@@ -34,82 +35,7 @@ Fayetteville, AR 72703
 
 ## Stripe v4
 
-<script
-  src="https://code.jquery.com/jquery-3.3.1.min.js"
-  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
-  crossorigin="anonymous"></script>
-<script
-  src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"
-  integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU="
-  crossorigin="anonymous"></script>
-<script
-  src="https://code.jquery.com/ui/1.11.4/jquery-ui.min.js"
-  integrity="sha256-xNjb53/rY+WmG+4L6tTl9m6PpqknWZvRt0rO1SRnJzw="
-  crossorigin="anonymous"></script>
-
-<div id="dialog-form" title="Create new user">
-  <p class="validateTips">All form fields are required.</p>
- 
-  <form>
-    <fieldset>
-      <label for="name">Name</label>
-      <input type="text" name="name" id="name" value="Jane Smith" class="text ui-widget-content ui-corner-all">
-      <label for="email">Email</label>
-      <input type="text" name="email" id="email" value="jane@smith.com" class="text ui-widget-content ui-corner-all">
-      <label for="password">Password</label>
-      <input type="password" name="password" id="password" value="xxxxxxx" class="text ui-widget-content ui-corner-all">
- 
-      <!-- Allow form submission with keyboard without duplicating the dialog button -->
-      <input type="submit" tabindex="-1" style="position:absolute; top:-1000px">
-    </fieldset>
-  </form>
-</div>
-
-
-<button id="btnDonate">click me</button>
-<script>
-var dialog;
-function addUser() {
-  dialog.dialog('close');
-}
- $(document).ready(function() {
-   dialog = dialog = $( "#dialog-form" ).dialog({
-      autoOpen: false,
-      height: 400,
-      width: 350,
-      modal: true,
-      buttons: {
-        "Create an account": addUser,
-        Cancel: function() {
-          dialog.dialog( "close" );
-        }
-      },
-      close: function() {
-        form[ 0 ].reset();
-        allFields.removeClass( "ui-state-error" );
-      }
-    });
-   $('#btnDonate').click(function() {
-     dialog.dialog('open');
-   });
- });
- </script>
-
-<form action="https://pmvruqtzuf.execute-api.us-east-1.amazonaws.com/prod/" method="POST">
-  <script
-    src="https://checkout.stripe.com/checkout.js" class="stripe-button"
-    data-key="pk_test_TYooMQauvdEDq54NiTphI7jx"
-    data-amount="50000"
-    data-name="FJ Ministries"
-    data-description="Donation"
-    data-image="https://stripe.com/img/documentation/checkout/marketplace.png"
-    data-locale="auto"
-    data-zip-code="true">
-  </script>
-  <form type="hidden" name="amount" value="50000"/>
-  <form type="hidden" name="currency" value="usd"/>
-</form>
-
+{% include donate.html %}
 
 ## PayPal
 
@@ -122,4 +48,5 @@ function addUser() {
 <img src="./give_files/pixel.gif" alt="" width="1" height="1" border="0"></form>
 
 ## Correspondence
+
 {% include address.html %}

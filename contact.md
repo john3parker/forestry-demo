@@ -28,24 +28,13 @@ menu:
 ## Priority Bank
 
 FJ Ministries  
+c/o Priority Bank  
 3401 E. Mission Blvd  
 Fayetteville, AR 72703
 
-Make checks payable to FJ MInistries
-
-## Stripe v4
+_Make checks payable to FJ MInistries_
 
 {% include donate.html %}
-
-## PayPal
-
-<form style="display: flex; justify-content: left;" action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top"><input name="cmd" type="hidden" value="_s-xclick"><br>
-
-<input name="hosted_button_id" type="hidden" value="KKHC5KC5QCR7Q"><br>
-
-<input alt="PayPal - The safer, easier way to pay online!" name="submit" src="https://moneypantry.com/wp-content/uploads/2013/11/paypal-donate-button.jpg" type="image" style="height:20%; width:20%;"><br>
-
-<img src="./give_files/pixel.gif" alt="" width="1" height="1" border="0"></form>
 
 ## Correspondence
 

@@ -26,25 +26,26 @@ menu:
 
 ---
 <table>
-  <tr>
-    <td>
-      ## Check
+<tr>
+<td>
+\## Check
 FJ Ministries  
 c/o Priority Bank  
 3401 E. Mission Blvd  
 Fayetteville, AR 72703
 
 _Make checks payable to FJ MInistries_
-    </td>
-    <td>
-      ## Credit Card
-		{% include donation.html %} 
-    </td>
-    <td>
-      	## PayPal
-    </td>
-  </tr>
- </table>
+</td>
+<td>
+\## Credit Card
+{% include donation.html %}
+</td>
+<td>
+\## PayPal
+</td>
+</tr>
+</table>
+
 ## Correspondence
 
 {% include address.html %}

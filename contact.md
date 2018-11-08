@@ -25,18 +25,17 @@ menu:
     weight: 5
 
 ---
-|## Check
-FJ Ministries  
+## Check FJ Ministries  
 c/o Priority Bank  
 3401 E. Mission Blvd  
 Fayetteville, AR 72703
 
 _Make checks payable to FJ MInistries_
 
-|## Credit Card
+## Credit Card
 {% include donation.html %}
 
-|## PayPal
+## PayPal
 
 ## Correspondence
 

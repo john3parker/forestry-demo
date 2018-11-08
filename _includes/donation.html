@@ -13,8 +13,6 @@
 <h2>Stripe</h2>
 <button id="btnDonate">Donate with credit card</button>
 <script>
-
-
  $(document).ready(function() {
    $('#btnDonate').click(function() {
 
@@ -62,7 +60,6 @@
 		});
    });
  });
-
  function stripePay(stripeToken, amount) {
  	var data = {};
  	data.stripeToken = stripeToken;

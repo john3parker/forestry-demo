@@ -5,7 +5,7 @@ banner_image: "/uploads/2018/02/17/college-building.jpg"
 heading: Contact FJ Ministries
 publish_date: 2017-12-01 04:00:00 +0000
 show_staff: false
-textline: description goes here
+textline: Donate multiple ways
 services: []
 hero_button:
   text: Hero Button goes here

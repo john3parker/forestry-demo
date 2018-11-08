@@ -31,7 +31,6 @@
 		            //console.log('Amount', data.amount);
 		            data.amount = data.amount * 100;
 		            $('input#amount').val(data.amount);
-
 		            if (data.amount < 500) {
 		            	vex.dialog.alert('The minimum donation amount is $5.00');
 		            	return;

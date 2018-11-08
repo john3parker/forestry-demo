@@ -8,8 +8,8 @@ show_staff: false
 textline: More ways to give
 services: []
 hero_button:
-  text: Hero Button goes here
-  href: http://www.paypal.com
+  text: ''
+  href: ''
 menu:
   navigation:
     identifier: _contact

@@ -1,4 +1,3 @@
-
 <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
 <script src="https://checkout.stripe.com/checkout.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/vex-js/4.1.0/js/vex.combined.min.js"></script>
@@ -10,14 +9,6 @@
  	<input type="hidden" id="stripeToken" name="stripeToken"/>
  	<input type="hidden" id="amount" name="amount"/>
 </form>
-<h2>Stripe</h2>
 <button id="btnDonate">Donate with credit card</button>
 <img src="{{ "/img/donation-with-stripe.jpg" | absolute_url }}"/>
 <script src="{{ "/js/fjm.stripe.js" | absolute_url }}" type="text/javascript"></script>
-
-<h2 id="paypal">PayPal</h2>
-
-<form style="display: flex; justify-content: left;" action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top"><input name="cmd" type="hidden" value="_s-xclick" /><br />
-	<input name="hosted_button_id" type="hidden" value="KKHC5KC5QCR7Q" /><br />
-	<input alt="PayPal - The safer, easier way to pay online!" name="submit" src="{{ "/img/donation-with-paypal.jpg" | absolute_url }}" type="image" style="height:20%; width:20%;" /><br />
-</form>

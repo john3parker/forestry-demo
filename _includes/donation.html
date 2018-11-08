@@ -1,0 +1,92 @@
+
+<script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+<script src="https://checkout.stripe.com/checkout.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/vex-js/4.1.0/js/vex.combined.min.js"></script>
+<script>vex.defaultOptions.className = 'vex-theme-os'</script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/vex-js/4.1.0/css/vex.min.css"/>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/vex-js/4.1.0/css/vex-theme-os.min.css"/>
+
+<form id="manualStripe" action="https://pmvruqtzuf.execute-api.us-east-1.amazonaws.com/prod/" method="POST">
+ 	<input type="hidden" id="stripeToken" name="stripeToken"/>
+ 	<input type="hidden" id="amount" name="amount"/>
+</form>
+<h2>Stripe</h2>
+<button id="btnDonate">Donate with credit card</button>
+<script>
+
+
+ $(document).ready(function() {
+   $('#btnDonate').click(function() {
+
+		vex.dialog.open({
+		    message: 'Thank you for your donation!',
+		    input: [
+		        '<input name="amount" type="number" placeholder="Donation amount" required />',
+		    ].join(''),
+		    buttons: [
+		        $.extend({}, vex.dialog.buttons.YES, { text: 'Donate' }),
+		        $.extend({}, vex.dialog.buttons.NO, { text: 'Back' })
+		    ],
+		    callback: function (data) {
+		        if (!data) {
+		            //console.log('Cancelled')
+		        } else {
+		            //console.log('Amount', data.amount);
+		            data.amount = data.amount * 100;
+		            $('input#amount').val(data.amount);
+
+		            if (data.amount < 500) {
+		            	vex.dialog.alert('The minimum donation amount is $5.00');
+		            	return;
+		            }
+
+		            var handler = StripeCheckout.configure({
+		            	key: 'pk_live_QUqhIKbjYN5t9kYRVYWWHnHW'
+		            	,locale: 'auto'
+		            	,name: 'FJ Ministries'
+		            	,description: 'One-time donation'
+		            	,amount: data.amount
+		            	,token: function(token) {
+		            		$('input#stripeToken').val(token.id);
+		            		$('input#amount').val(data.amount);
+		            		//$('form#manualStripe').submit();
+		            		stripePay(token.id, data.amount);
+		            	}
+		            });
+
+		            handler.open({amount: Math.round(amount)});
+
+
+		        }
+		    }
+		});
+   });
+ });
+
+ function stripePay(stripeToken, amount) {
+ 	var data = {};
+ 	data.stripeToken = stripeToken;
+ 	data.amount = amount;
+
+ 	$.post('https://pmvruqtzuf.execute-api.us-east-1.amazonaws.com/prod/', data, function(result) {
+ 		if (result.err) {
+ 			vex.dialog.alert('There was a problem processing with Stripe. Please contact FJ Ministries.');
+ 		}
+ 		else {
+ 			vex.dialog.alert('Stripe processing is complete. Thank you for your donation!')
+ 		}
+ 	}).fail(function(result) {
+ 		console.log(result);
+		vex.dialog.alert('There was a problem processing with Stripe. Please contact FJ Ministries.');
+ 	})
+
+ }
+ </script>
+
+<h2 id="paypal">PayPal</h2>
+
+<form style="display: flex; justify-content: left;" action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top"><input name="cmd" type="hidden" value="_s-xclick" /><br />
+	<input name="hosted_button_id" type="hidden" value="KKHC5KC5QCR7Q" /><br />
+	<input alt="PayPal - The safer, easier way to pay online!" name="submit" src="https://moneypantry.com/wp-content/uploads/2013/11/paypal-donate-button.jpg" type="image" style="height:20%; width:20%;" /><br />
+	<img src="./give_files/pixel.gif" alt="" width="1" height="1" border="0" />
+</form>

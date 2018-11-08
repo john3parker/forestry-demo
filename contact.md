@@ -25,7 +25,8 @@ menu:
     weight: 5
 
 ---
-## Check FJ Ministries  
+## Check
+FJ Ministries  
 c/o Priority Bank  
 3401 E. Mission Blvd  
 Fayetteville, AR 72703

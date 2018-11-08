@@ -31,7 +31,7 @@ FJ Ministries
 3401 E. Mission Blvd  
 Fayetteville, AR 72703
 
-''Make checks payable to FJ MInistries''
+Make checks payable to FJ MInistries
 
 ## Stripe v4
 

@@ -15,7 +15,6 @@
 <script>
  $(document).ready(function() {
    $('#btnDonate').click(function() {
-
 		vex.dialog.open({
 		    message: 'Thank you for your donation!',
 		    input: [
@@ -37,7 +36,6 @@
 		            	vex.dialog.alert('The minimum donation amount is $5.00');
 		            	return;
 		            }
-
 		            var handler = StripeCheckout.configure({
 		            	key: 'pk_live_QUqhIKbjYN5t9kYRVYWWHnHW'
 		            	,locale: 'auto'
@@ -51,10 +49,7 @@
 		            		stripePay(token.id, data.amount);
 		            	}
 		            });
-
 		            handler.open({amount: Math.round(amount)});
-
-
 		        }
 		    }
 		});
@@ -64,7 +59,6 @@
  	var data = {};
  	data.stripeToken = stripeToken;
  	data.amount = amount;
-
  	$.post('https://pmvruqtzuf.execute-api.us-east-1.amazonaws.com/prod/', data, function(result) {
  		if (result.err) {
  			vex.dialog.alert('There was a problem processing with Stripe. Please contact FJ Ministries.');
@@ -76,7 +70,6 @@
  		console.log(result);
 		vex.dialog.alert('There was a problem processing with Stripe. Please contact FJ Ministries.');
  	})
-
  }
  </script>
 

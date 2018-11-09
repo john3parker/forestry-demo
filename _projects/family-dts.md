@@ -19,7 +19,7 @@ The Family Discipleship Training School is about reaching the nations and transf
 
 # Our Focus
 
-<video height="500px" frameborder="0"><source src="https://player.vimeo.com/video/103874380" type="video/mp4"></video> Our goal is to see the end of divorce in the Body of Christ so that their marriages and families will bring glory to God in all that they do and so that future generations will be raised to know the Lord. The Family DTS is designed for married couples, with or without children.
+<video height="500px" frameborder="0" controls><source src="https://player.vimeo.com/video/103874380" type="video/mp4"></video> Our goal is to see the end of divorce in the Body of Christ so that their marriages and families will bring glory to God in all that they do and so that future generations will be raised to know the Lord. The Family DTS is designed for married couples, with or without children.
 
 The Discipleship Training School (DTS) is YWAM’s six month entry level course, embodying YWAM’s mission to know God and make Him known. DTS provides an environment for students to personally encounter Jesus Christ, learn to hear God’s voice, and respond with joy!
 

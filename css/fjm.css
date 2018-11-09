@@ -1,0 +1,10 @@
+.grid-layout .fjm-card {
+    margin: 0 1em;
+    border-radius: 3px;
+    background-color: #f7f7f7;
+    margin-bottom: 2em;
+    box-shadow: 0 1px 3px rgba(0,0,0,.12), 0 1px 2px rgba(0,0,0,.24);
+    transition: all 0.2s ease-in-out;
+    cursor: pointer;
+    overflow: hidden;
+}

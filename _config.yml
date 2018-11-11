@@ -21,7 +21,7 @@ collections:
     output: true
   projects:
     output: true
-    permalink: "/projects/:path/"
+    permalink: "/programs/:path/"
   donations:
     output: true
     permalink: "/donate/:path/"
@@ -30,9 +30,6 @@ collections:
 jekyll-archives:
   enabled: all
   layout: "archive"
-gems:
-  - xjekyll-menus
-  - jekyll-feed
-  - jekyll-archives
 plugins:
   - jekyll-feed
+  - jekyll-archives

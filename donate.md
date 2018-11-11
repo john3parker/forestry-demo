@@ -10,10 +10,10 @@ textline: More ways to serve
 services: []
 hero_button:
   text: Donate
-  href: "/contact/#donate"
-xmenu:
+  href: "/donate/#donate"
+menu:
   navigation:
-    identifier: _contact
+    identifier: _donate
     weight: 5
 
 ---

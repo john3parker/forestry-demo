@@ -1,0 +1,10 @@
+- url: /
+  title: Home
+- url: /about
+  title: About
+- url: /projects
+  title: Programs
+- url: /posts
+  title: Posts
+- url: /donate
+  title: Donate 

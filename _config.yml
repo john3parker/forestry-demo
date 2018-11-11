@@ -31,6 +31,8 @@ jekyll-archives:
   enabled: all
   layout: "archive"
 gems:
-  - jekyll-menus
+  - xjekyll-menus
   - jekyll-feed
   - jekyll-archives
+plugins:
+  - jekyll-feed

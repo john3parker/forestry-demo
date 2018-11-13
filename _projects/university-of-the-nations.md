@@ -14,5 +14,6 @@ slug: ''
 # EXPERIENCE THE UNIVERSITY OF THE NATIONS
 
 YWAM Kona’s [University of the Nations](https://www.uofnkona.edu) campus is a place of great vision. Maybe anywhere that hosts thousands of young, sold out followers of Jesus who have left everything to serve would experience this kind of “open heaven” atmosphere that many remark on when they arrive here? These buildings are just tools. But God is using every part of our campus to see students and staff experience massive life changes and take His love to the nations!
-
-<iframe src="https://player.vimeo.com/video/157811508" width="100%" height="500px"></iframe>
+<div class="embed-responsive embed-responsive-16by9">
+	<iframe class="embed-responsive-item" src="https://player.vimeo.com/video/157811508" width="100%" height="500px"></iframe>
+</div>

@@ -6,19 +6,32 @@ layout: default
 	the _posts/ collection
 {% endcomment %}
 
-{% include breadcrumbs.html class="content-narrow" %}
+{% include breadcrumbs.html %}
 
-{% for post in site.posts %}
-<div class="container pure-g">
-  <div class="pure-u-1">
-      <div class="content content-narrow">
-        <div class="list-layout">
-          <h2><a href="{{ post.url | absolute_url }}">{{ post.title }}</a></h2>
-          <div>{{ post.content | truncatewords: 30 }}</div>
+<div class="container">
+  <div class="row">
+  {% for post in site.posts %}
+    <div class="col">
+      <div class="card">
+        <div class="card-body">
+          <h4 class="card-title">
+              <a href="{{ post.url | absolute_url }}">{{ post.title }}</a>
+          </h4>
           <date>{{ post.date | date_to_string }}</date>
+        {% if post.banner_image and post.banner_image != ''  %}
+          <div class="card-img-top">
+              <img class="img-fluid img-thumbnail" alt="{{ post.title }}" src="{{ post.banner_image | absolute_url }}">
+          </div>
+          {% endif %}
+          <p class="card-text">
+              {{ post.content | split:'<!--break-->' | first }}
+              {% if post.content contains '<!--break-->' %}
+                  <a href="{{ post.url | absolute_url }}">Read more</a>
+              {% endif %}
+          </p>
         </div>
       </div>
     </div>
+  {% endfor %}
   </div>
 </div>
-{% endfor %}

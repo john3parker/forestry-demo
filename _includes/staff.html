@@ -3,33 +3,36 @@
 {% endcomment %}
 
 {% if page.show_staff %}
-<section class="column-list-layout">
-    <div class="container pure-g">
-        <div class="pure-u-1">
-            <div class="content">
+<section class="staff container">
+    <div class="">
+        <div class="">
+            <div class="">
                 <h2 class="section-heading">Board of Directors</h2>
-                <div class="pure-g">
+                <div class="row">
                 {% assign people = site.people %}
                 {% for person in people %}
-                    <div class="pure-u-1 pure-u-md-1-4">
-                        <div class="post">
-                            <div class="post-header">
+                    <div class="col">
+                        <div class="card">
+                            <div class="card-img-top">
                             {% if person.thumbnail %}
-                                <img alt="{{ person.title }}" src="{{ person.thumbnail | absolute_url }}">
+                                <img class="img-fluid img-thumbnail" alt="{{ person.title }}" src="{{ person.thumbnail | absolute_url }}">
                             {% else %}
-                                <img alt="{{ person.title }}" src="{{ "/img/placeholder.png" | absolute_url }}>
+                                <img class="img-fluid img-thumbnail" alt="{{ person.title }}" src="{{ "/img/placeholder.png" | absolute_url }}>
                             {% endif %}
                             </div>
-                            <div class="post-body">
-                                <h3>
+                            <div class="card-body">
+                                <h6 class="card-title">
                                     <a href="{{ person.url | absolute_url }}">{{ person.title }}</a>
-                                </h3>
+                                </h6>
                                 {% if person.sub_heading %}
-                                <div class="subtitle">
+                                <div class="card-text">
                                     {{ person.sub_heading }}
                                 </div>{% endif %}
-                                <p>
-                                    {{ person.content | truncatewords: 25, "...<br><br>Continue reading →" }}
+                                <p class="card-text">
+                                    {{ person.content | split:'<!--break-->' | first }}
+                                    {% if person.content contains '<!--break-->' %}
+                                        <a href="{{ person.url | absolute_url }}">Read more</a>
+                                     {% endif %}
                                 </p>
                             </div>
                         </div>

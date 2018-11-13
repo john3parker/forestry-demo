@@ -5,11 +5,11 @@ layout: default
 	This layout is used by the documents in the _posts/ collection
 {% endcomment %}
 
-{% include breadcrumbs.html class="content-narrow" %}
+{% include breadcrumbs.html %}
 
-<div class="container pure-g">
-  <div class="pure-u-1">
-    <div class="content content-narrow">
+<div class="container">
+  <div class="">
+    <div class="">
       <div class="meta">
         {% if page.date %}
         <div class="post-date">{{ page.date | date_to_string }}</div>
@@ -37,12 +37,12 @@ layout: default
       {% if page.related_posts.size > 0 %}
 			<hr>
         <h2> Related Posts </h2>
-        <div class="grid-layout">
-          <div class="pure-g">
+        <div class="">
+          <div class="row">
           {% for item in page.related_posts %}
             {% assign posts = site.posts | where:"path", item %}
               {% for post in posts %}
-              <div class="pure-u-1 pure-u-md-1-3">
+              <div class="col">
                 <div class="card">
                   <div class="card-header">
                   {% if post.banner_image and post.banner_image != "" %}

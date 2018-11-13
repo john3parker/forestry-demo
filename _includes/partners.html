@@ -3,17 +3,15 @@
 {% endcomment %}
 
 {% if page.partners %}
-<section class="partners">
-    <div class="container">
+<section class="partners container pt-5 pb-5">
+    <div class="">
         <h2>Funding Partners</h2>
-        <div class="flexslider">
-            <ul class="slides">
-                {% for logo in page.partners %}
-                    <li>
-                        <img src="{{ logo | absolute_url }}" alt="{{ logo }}" />
-                    </li>
-                {% endfor %}
-            </ul>
+        <div class="row">
+            {% for logo in page.partners %}
+                <div class="col">
+                    <img src="{{ logo | absolute_url }}" alt="{{ logo }}" style="width:7rem;"/>
+                </div>
+            {% endfor %}
         </div>
     </div>
 </section>

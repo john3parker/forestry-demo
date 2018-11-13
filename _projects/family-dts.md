@@ -40,5 +40,6 @@ th {
 |$3995 (per adult; see Foundation School for kid's pricing)             |$4000-4500 (per adult; lower pricing for children)|
 
 -----
-
-<iframe src="https://player.vimeo.com/video/103874380" width="100%" height="500px"></iframe>
+<div class="embed-responsive embed-responsive-16by9">
+	<iframe class="embed-responsive-item" src="https://player.vimeo.com/video/103874380" width="100%" height="500px"></iframe>
+</div>

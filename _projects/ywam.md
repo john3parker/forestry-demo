@@ -19,4 +19,6 @@ One of the joys of participating in YWAM is to work with people from many nation
 
 [We invite you to join us!](https://www.ywam.org) Discover how you can use your gifts and callings in the YWAM world.
 
-<iframe width="100%" height="500px" src="https://www.youtube.com/embed/PcAWtVsjOGA" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<div class="embed-responsive embed-responsive-16by9">
+<iframe class="embed-responsive-item" width="100%" height="500px" src="https://www.youtube.com/embed/PcAWtVsjOGA" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>

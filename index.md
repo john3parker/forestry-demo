@@ -6,8 +6,6 @@ heading: FJ Ministries
 partners:
 - "/uploads/2018/11/04/university-of-the-nations.jpeg"
 - "/uploads/2017/11/13/stem.png"
-- "/uploads/2017/11/13/UPenn_logo.png"
-- "/uploads/2017/11/13/nysed.png"
 services:
 - description: YWAM encompasses thousands of people and hundreds of ministries in
     almost every country of the world. In every case, the passion is to know God and

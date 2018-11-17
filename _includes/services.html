@@ -6,7 +6,7 @@
 <section class="services container pt-5 pb-5">
     <div class="row">
         {% for item in page.services %}
-        <div class="col">
+        <div class="col-6 col-md-4">
               <div class="service">
                   <div class="service-icon"><img class="img-fluid img-thumbnail" src="{{ item.icon | absolute_url }}" alt=""></div>
                   <h2>{{ item.heading }}</h2>

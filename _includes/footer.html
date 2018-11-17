@@ -1,10 +1,8 @@
-<nav class="navbar navbar-dark bg-dark">
-    <footer class="site-footer container">
-    	<div class="row">
-            <div class="col">
+<nav class="navbar navbar-dark bg-dark justify-content-center align-items-stretch">
+            <div class="col-sm-12 col-md-6 col-lg-3">
                 <img src="{{ "/img/logo-white.png" | absolute_url }}" alt="" class="footer-logo">
             </div>
-            <div class="col">
+            <div class="col-sm-12 col-md-6 col-lg-3">
                 <h3 class="text-white">About</h3>
                 <div class="dropdown-divider"></div>
                 <ul class="navbar-nav flex-column">
@@ -13,7 +11,7 @@
                 {% endfor %}
                 </ul>
             </div>
-            <div class="col">
+            <div class="col-sm-12 col-md-6 col-lg-3">
                 <h3 class="text-white">Projects</h3>
                 <div class="dropdown-divider"></div>
                 <ul class="navbar-nav flex-column">
@@ -25,18 +23,16 @@
                 {% endif %}
                 </ul>
             </div>
-            <div class="col">
+            <div class="col-sm-12 col-md-6 col-lg-3">
                 <h3 class="text-white">Contact</h3>
                 <div class="dropdown-divider"></div>
                 {% include address.html %}
             </div>
-    	</div>
     	<div class="copyright text-muted">
             <p>
                 &copy;{{ 'now' | date: "%Y" }} {{ site.title }} - All Rights Reserved<br>
     		</p>
     	</div>
-    </footer>
 </nav>
 <!-- Javascript -->
 </body>

@@ -11,7 +11,7 @@ layout: default
 <div class="container">
   <div class="row">
   {% for post in site.posts %}
-    <div class="col">
+    <div class="col-12 col-md-6 col-lg-4">
       <div class="card">
         <div class="card-body">
           <h4 class="card-title">
@@ -20,7 +20,7 @@ layout: default
           <date>{{ post.date | date_to_string }}</date>
         {% if post.banner_image and post.banner_image != ''  %}
           <div class="card-img-top">
-              <img class="img-fluid img-thumbnail" alt="{{ post.title }}" src="{{ post.banner_image | absolute_url }}">
+              <a href="{{ post.url | absolute_url }}"><img class="img-fluid img-thumbnail" alt="{{ post.title }}" src="{{ post.banner_image | absolute_url }}"></a>
           </div>
           {% endif %}
           <p class="card-text">

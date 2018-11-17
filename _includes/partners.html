@@ -8,7 +8,7 @@
         <h2>Funding Partners</h2>
         <div class="row">
             {% for logo in page.partners %}
-                <div class="col">
+                <div class="col-sm-12 col-md-4">
                     <img src="{{ logo | absolute_url }}" alt="{{ logo }}" style="width:7rem;"/>
                 </div>
             {% endfor %}

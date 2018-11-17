@@ -8,60 +8,54 @@ layout: default
 {% include breadcrumbs.html %}
 
 <div class="container">
-  <div class="">
-    <div class="">
-      <div class="meta">
-        {% if page.date %}
-        <div class="post-date">{{ page.date | date_to_string }}</div>
+  <div class="meta">
+    {% if page.date %}
+    <div class="post-date">{{ page.date | date_to_string }}</div>
+    {% endif %}
+    {% if page.tags.size > 0 %}
+    <span class="meta-separator">&bull;</span>
+    <ul class="tags-list">
+      <li class="inline tag_list_item">
+				Tags:
+			</li>
+			{% for tag in page.tags %}
+      <li class="inline tag_list_item">
+        {{ tag }}
+        {% if forloop.last == true %}{% else %}
+          <span>,</span>
         {% endif %}
-        {% if page.tags.size > 0 %}
-        <span class="meta-separator">&bull;</span>
-        <ul class="tags-list">
-          <li class="inline tag_list_item">
-						Tags:
-					</li>
-					{% for tag in page.tags %}
-          <li class="inline tag_list_item">
-            {{ tag }}
-            {% if forloop.last == true %}{% else %}
-              <span>,</span>
+      </li>
+      {% endfor %}
+    </ul>
+    {% endif %}
+  </div>
+
+  {{ content }}
+
+  {% if page.related_posts.size > 0 %}
+		<hr>
+    <h2> Related Posts </h2>
+    <div class="row">
+    {% for item in page.related_posts %}
+      {% assign posts = site.posts | where:"path", item %}
+        {% for post in posts %}
+        <div class="col-4">
+          <div class="card">
+            <div class="card-header">
+            {% if post.banner_image and post.banner_image != "" %}
+              <img src="{{ post.banner_image | absolute_url }}" alt="{{ post.title }}">
+            {% else %}
+              <img src="{{ "/img/placeholder.png" | absolute_url }}" alt="{{ post.title }}">
             {% endif %}
-          </li>
-          {% endfor %}
-        </ul>
-        {% endif %}
-      </div>
-
-      {{ content }}
-
-      {% if page.related_posts.size > 0 %}
-			<hr>
-        <h2> Related Posts </h2>
-        <div class="">
-          <div class="row">
-          {% for item in page.related_posts %}
-            {% assign posts = site.posts | where:"path", item %}
-              {% for post in posts %}
-              <div class="col">
-                <div class="card">
-                  <div class="card-header">
-                  {% if post.banner_image and post.banner_image != "" %}
-                    <img src="{{ post.banner_image | absolute_url }}" alt="{{ post.title }}">
-                  {% else %}
-                    <img src="{{ "/img/placeholder.png" | absolute_url }}" alt="{{ post.title }}">
-                  {% endif %}
-                  </div>
-                  <div class="card-body">
-                    <h3><a href="{{ post.url | absolute_url }}">{{ post.title }}</a></h3>
-                    <p>{{ post.sub_heading | slice: 0, 80 }}</p>
-                  </div>
-                </div>
-              </div>
-              {% endfor %}
-          {% endfor %}
+            </div>
+            <div class="card-body">
+              <h3><a href="{{ post.url | absolute_url }}">{{ post.title }}</a></h3>
+              <p>{{ post.sub_heading | slice: 0, 80 }}</p>
+            </div>
           </div>
         </div>
-      {% endif %}
+        {% endfor %}
+    {% endfor %}
     </div>
-  </div>
+  {% endif %}
 </div>

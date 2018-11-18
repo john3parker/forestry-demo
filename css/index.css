@@ -43,6 +43,10 @@
     color: white;
 }
 
+.navbar-dark .navbar-nav .nav-link {
+    color: rgba(255,255,255);
+    font-size: 1.1rem;
+}
 
 
 

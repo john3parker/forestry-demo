@@ -1,6 +1,6 @@
 ---
 title: Home
-banner_image: "/uploads/2018/11/04/cropped-riley-family.jpg"
+banner_image: "/img/2018-10-riley-family-v2.jpg"
 layout: landing-page
 heading: FJ Ministries
 partners:

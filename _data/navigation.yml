@@ -9,8 +9,12 @@ top:
   title: Posts
 - url: /donate
   title: Donate 
+- url: /signup
+  title: Sign up
 
 footer:
+- url: /signup
+  title: Sign up
 - url: /programs
   title: Programs
 - url: /posts

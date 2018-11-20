@@ -1,0 +1,17 @@
+---
+layout: default
+---
+{% comment %}
+	This layout is used by the documents in the _posts/ collection
+{% endcomment %}
+
+{% include breadcrumbs.html class="content-narrow" %}
+
+<div class="container">
+	{{ content }}
+
+	{% if page.show_signup == true %}
+		{% include mail-chimp-fjministries-form.html %}
+	{% endif %}
+
+</div>

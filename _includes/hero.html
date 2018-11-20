@@ -1,7 +1,8 @@
 {% if page.banner_image and page.banner_image != "" %}
 	<div id="banner" style="height: 500px;">
-		<div class="hero-image" style="background-image: url('{{ page.banner_image | absolute_url }}');">
+		<div class="hero-image" style="background-image: url('{{ page.banner_image | absolute_url }}'); {{ page.background-image-stye }}">
 			<div class="hero-text">
+				{% if page.show_title != false %}
 				<header class="call-to-action pt-5">
 					<h1 class="d-none d-md-block my-3">{{ page.heading | default: page.title }}</h1>
 					<h3 class="d-xs-block d-sm-block d-md-none my-3">{{ page.heading | default: page.title }}</h3>
@@ -17,6 +18,7 @@
 					</div>
 					{% endif %}
 				</header>
+				{% endif %}
 			</div>
 		</div>
 

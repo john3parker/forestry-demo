@@ -4,9 +4,7 @@ date: 2018-11-19 19:37:00 +0000
 banner_image: "/img/stay-in-touch.png"
 background-image-stye: "background-size: contain;"
 heading: ''
-x: Receive our Newsletter
 sub_heading: ''
-xx: Sign up to receive our free newsletter
 layout: signup-form  
 publish_date:  2018-11-19 19:37:00 +0000
 show_staff: false

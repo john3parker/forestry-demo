@@ -1,13 +1,13 @@
 <nav class="navbar navbar-dark bg-dark justify-content-center align-items-stretch">
             <div class="col-sm-12 col-md-6 col-lg-3">
-                <img src="{{ "/img/logo-white.png" | absolute_url }}" alt="" class="img-fluid img-thumbnail footer-logo">
+                <img src="{{ "/img/logo-white.png" | relative_url }}" alt="" class="img-fluid img-thumbnail footer-logo">
             </div>
             <div class="col-sm-12 col-md-6 col-lg-3">
                 <h3 class="text-white">About</h3>
                 <div class="dropdown-divider"></div>
                 <ul class="navbar-nav flex-column">
                 {% for item in site.data.navigation.footer %}
-                    <li class="nav-item active"><a class="nav-link" href="{{ item.url | absolute_url }}">{{ item.title }}</a></li>
+                    <li class="nav-item active"><a class="nav-link" href="{{ item.url | relative_url }}">{{ item.title }}</a></li>
                 {% endfor %}
                 </ul>
             </div>
@@ -16,10 +16,10 @@
                 <div class="dropdown-divider"></div>
                 <ul class="navbar-nav flex-column">
                 {% for project in site.projects limit:5 %}
-                    <li class="nav-item active"><a class="nav-link" href="{{ project.url | absolute_url }}">{{ project.title }}</a></li>
+                    <li class="nav-item active"><a class="nav-link" href="{{ project.url | relative_url }}">{{ project.title }}</a></li>
                 {% endfor %}
                 {% if site.projects | size > 5 %}
-                    <li class="nav-item active"><a class="nav-link" href="{{ "/projects/" | absolute_url }}">See all projects</a></li>
+                    <li class="nav-item active"><a class="nav-link" href="{{ "/projects/" | relative_url }}">See all projects</a></li>
                 {% endif %}
                 </ul>
             </div>

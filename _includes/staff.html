@@ -15,14 +15,14 @@
                         <div class="card">
                             <div class="card-img-top">
                             {% if person.thumbnail %}
-                                <img class="img-fluid img-thumbnail" alt="{{ person.title }}" src="{{ person.thumbnail | absolute_url }}">
+                                <img class="img-fluid img-thumbnail" alt="{{ person.title }}" src="{{ person.thumbnail | relative_url }}">
                             {% else %}
-                                <img class="img-fluid img-thumbnail" alt="{{ person.title }}" src="{{ "/img/placeholder.png" | absolute_url }}>
+                                <img class="img-fluid img-thumbnail" alt="{{ person.title }}" src="{{ "/img/placeholder.png" | relative_url }}>
                             {% endif %}
                             </div>
                             <div class="card-body">
                                 <h6 class="card-title">
-                                    <a href="{{ person.url | absolute_url }}">{{ person.title }}</a>
+                                    <a href="{{ person.url | relative_url }}">{{ person.title }}</a>
                                 </h6>
                                 {% if person.sub_heading %}
                                 <div class="card-text">
@@ -31,7 +31,7 @@
                                 <p class="card-text">
                                     {{ person.content | split:'<!--break-->' | first }}
                                     {% if person.content contains '<!--break-->' %}
-                                        <a href="{{ person.url | absolute_url }}">Read more</a>
+                                        <a href="{{ person.url | relative_url }}">Read more</a>
                                      {% endif %}
                                 </p>
                             </div>

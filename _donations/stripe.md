@@ -18,5 +18,6 @@ use_content_as_image: true
  	<input type="hidden" id="stripeToken" name="stripeToken"/>
  	<input type="hidden" id="amount" name="amount"/>
 </form>
-<script src="{{ "/js/fjm.stripe.js" | absolute_url }}" type="text/javascript"></script>
-<img src="{{ "img/donation-with-stripe.jpg" | absolute_url }}" id="btnDonate"/>
+<script src="{{ "/js/fjm.stripe.js" | relative_url }}" type="text/javascript"></script>
+<img src="{{ "img/donation-with-stripe.jpg" | relative_url }}" id="btnDonate" style="cursor: pointer;"/>
+

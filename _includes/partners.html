@@ -9,7 +9,7 @@
         <div class="row">
             {% for logo in page.partners %}
                 <div class="col-sm-12 col-md-4">
-                    <img src="{{ logo | absolute_url }}" alt="{{ logo }}" style="width:7rem;"/>
+                    <img src="{{ logo | relative_url }}" alt="{{ logo }}" style="width:7rem;"/>
                 </div>
             {% endfor %}
         </div>

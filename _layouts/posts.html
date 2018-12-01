@@ -15,18 +15,18 @@ layout: default
       <div class="card">
         <div class="card-body">
           <h4 class="card-title">
-              <a href="{{ post.url | absolute_url }}">{{ post.title }}</a>
+              <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
           </h4>
           <date>{{ post.date | date_to_string }}</date>
         {% if post.banner_image and post.banner_image != ''  %}
           <div class="card-img-top">
-              <a href="{{ post.url | absolute_url }}"><img class="img-fluid img-thumbnail" alt="{{ post.title }}" src="{{ post.banner_image | absolute_url }}"></a>
+              <a href="{{ post.url | relative_url }}"><img class="img-fluid img-thumbnail" alt="{{ post.title }}" src="{{ post.banner_image | relative_url }}"></a>
           </div>
           {% endif %}
           <p class="card-text">
               {{ post.content | split:'<!--break-->' | first }}
               {% if post.content contains '<!--break-->' %}
-                  <a href="{{ post.url | absolute_url }}">Read more</a>
+                  <a href="{{ post.url | relative_url }}">Read more</a>
               {% endif %}
           </p>
         </div>

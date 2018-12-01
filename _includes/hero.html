@@ -1,6 +1,6 @@
 {% if page.banner_image and page.banner_image != "" %}
 	<div id="banner" class="hero-banner">
-		<div class="hero-image" style="background-image: url('{{ page.banner_image | absolute_url }}'); {{ page.background-image-stye }}">
+		<div class="hero-image" style="background-image: url('{{ page.banner_image | relative_url }}'); {{ page.background-image-stye }}">
 			<div class="hero-text">
 				{% if page.show_title != false %}
 				<header class="call-to-action pt-5">
@@ -12,7 +12,7 @@
 					{% endif %}
 					{% if page.hero_button %}
 					<div>
-						<a href="{{ page.hero_button.href | absolute_url }}" class="btn btn-primary" title="{{ page.hero_button.text }}">
+						<a href="{{ page.hero_button.href | relative_url }}" class="btn btn-primary" title="{{ page.hero_button.text }}">
 							{{ page.hero_button.text }}&nbsp; > 
 						</a>
 					</div>
@@ -40,7 +40,7 @@
 				<div class="pt-5">
 				{% if page.collection == 'people' and page.thumbnail and page.thumbnail != "" %}
 					<div class="profile-photo">
-						<img src="{{ page.thumbnail | absolute_url }}" alt="{{ page.title }}">
+						<img src="{{ page.thumbnail | relative_url }}" alt="{{ page.title }}">
 					</div>
 				{% endif %}
 					<h2>{{ page.title }}</h2>

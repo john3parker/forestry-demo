@@ -15,14 +15,14 @@ layout: default
 				<div class="card">
 					<div class="card-img-top" xstyle="height:250px; max-height:300px;">
 						{% if donation.banner_image and donation.banner_image != "" %}
-						<img class="img-fluid img-thumbnail" src="{{ donation.banner_image | absolute_url }}" alt="{{ donation.title }}" style="{{ donation.image_style }}">
+						<img class="img-fluid img-thumbnail" src="{{ donation.banner_image | relative_url }}" alt="{{ donation.title }}" style="{{ donation.image_style }}">
 						{% elsif donation.use_content_as_image == true %}
 							{{ donation.content }}
 						{% endif %}
 					</div>
 					<div class="card-body">
 						<div class="card-title">
-							<h3><a href="{{ donation.url | absolute_url }}">{{ donation.title }}</a></h3>
+							<h3><a href="{{ donation.url | relative_url }}">{{ donation.title }}</a></h3>
 						</div>
 						<p class="card-text">{{ donation.sub_heading | slice: 0, 80 }}</p>
 					</div>

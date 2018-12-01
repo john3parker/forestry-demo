@@ -13,6 +13,8 @@ top:
   title: Sign up
 
 footer:
+- url: /donate
+  title: Donate 
 - url: /signup
   title: Sign up
 - url: /programs

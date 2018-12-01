@@ -17,9 +17,7 @@ services:
     to hear God’s voice, and respond with joy!
   heading: Family Discipleship Training School
   icon: "/uploads/2018/11/04/familyDTS_button.jpg"
-sub_heading: A family, saved by grace, hoping to be ambassadors for Christ by igniting
-  passion for God and compassion for others through solid biblical teaching and by
-  revealing their hearts.
+sub_heading: Ambassadors for Christ
 textline: FJ Ministry Programs
 hero_button:
   text: Learn more

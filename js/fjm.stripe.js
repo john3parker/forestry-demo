@@ -24,7 +24,7 @@ $(document).ready(function() {
 		            console.log('### TEST MODE ###');
 		            var handler = StripeCheckout.configure({
 		            	//key: 'pk_live_QUqhIKbjYN5t9kYRVYWWHnHW'
-		            	key='pk_test_La2cZOeKLanoVmecpAkb4wEg'
+		            	key:'pk_test_La2cZOeKLanoVmecpAkb4wEg'
 		            	,locale: 'auto'
 		            	,name: 'FJ Ministries'
 		            	,description: 'One-time donation'

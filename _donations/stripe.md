@@ -18,7 +18,7 @@ use_content_as_image: true
  	<input type="hidden" id="stripeToken" name="stripeToken"/>
  	<input type="hidden" id="amount" name="amount"/>
 </form>
-<script src="{{ "/js/fjm.stripe.js" | relative_url }}" type="text/javascript"></script>
+<script src="{{ "/js/fjm.stripe.js?v1.0.1" | relative_url }}" type="text/javascript"></script>
 <img src="{{ "img/donation-with-stripe.jpg" | relative_url }}" id="btnDonate" style="cursor: pointer;"/>
 
 <script src="https://www.google.com/recaptcha/api.js?render=6LfzR50UAAAAANj86kgeNgZPTzIJNkEA0FacJygu"></script>

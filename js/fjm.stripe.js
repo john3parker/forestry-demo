@@ -21,10 +21,10 @@ $(document).ready(function() {
 		            	vex.dialog.alert('The minimum donation amount is $5.00');
 		            	return;
 		            }
-		            console.log('### TEST MODE ###');
+		            //console.log('### TEST MODE ###');
 		            var handler = StripeCheckout.configure({
-		            	//key: 'pk_live_QUqhIKbjYN5t9kYRVYWWHnHW'
-		            	key:'pk_test_La2cZOeKLanoVmecpAkb4wEg'
+		            	key: 'pk_live_QUqhIKbjYN5t9kYRVYWWHnHW'
+		            	//key:'pk_test_La2cZOeKLanoVmecpAkb4wEg'
 		            	,locale: 'auto'
 		            	,name: 'FJ Ministries'
 		            	,description: 'One-time donation'

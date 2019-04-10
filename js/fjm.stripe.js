@@ -46,6 +46,12 @@ $(document).ready(function() {
  	var data = {};
  	data.stripeToken = stripeToken;
  	data.amount = amount;
+
+	grecaptcha.ready(function() {
+	  grecaptcha.execute('6LfzR50UAAAAANj86kgeNgZPTzIJNkEA0FacJygu', {action: 'donate'}).then(function(token) {
+	  	data.token = token;
+	  });
+	});
  	
  	$.post('https://pmvruqtzuf.execute-api.us-east-1.amazonaws.com/prod/', data, function(result) {
  		if (result.err) {

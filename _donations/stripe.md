@@ -23,8 +23,19 @@ use_content_as_image: true
 
 <script src="https://www.google.com/recaptcha/api.js?render=6LfzR50UAAAAANj86kgeNgZPTzIJNkEA0FacJygu"></script>
 <script>
-grecaptcha.ready(function() {
-  grecaptcha.execute('6LfzR50UAAAAANj86kgeNgZPTzIJNkEA0FacJygu', {action: 'donate'}).then(function(token) {  
-  });
+
+$('#manualStripe').submit(function() {
+	event.preventDefault();
+	var stripeToken = $('#stripeToken').val();
+	var amount = $('#amount').val();
+
+	grecaptcha.ready(function() {
+	  grecaptcha.execute('6LfzR50UAAAAANj86kgeNgZPTzIJNkEA0FacJygu', {action: 'donate'}).then(function(token) {
+	  	$('#manualStripe').prepend('<input type="hidden" name="g-recaptcha-response" value="' + token + '">');
+	  	$.post('https://pmvruqtzuf.execute-api.us-east-1.amazonaws.com/prod/', {stripeToken: stripeToken, amount: amount, token: token});
+	  });
+	});
+
 });
+
 </script

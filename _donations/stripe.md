@@ -21,3 +21,10 @@ use_content_as_image: true
 <script src="{{ "/js/fjm.stripe.js" | relative_url }}" type="text/javascript"></script>
 <img src="{{ "img/donation-with-stripe.jpg" | relative_url }}" id="btnDonate" style="cursor: pointer;"/>
 
+<script src="https://www.google.com/recaptcha/api.js?render=6LfzR50UAAAAANj86kgeNgZPTzIJNkEA0FacJygu"></script>
+<script>
+grecaptcha.ready(function() {
+  grecaptcha.execute('6LfzR50UAAAAANj86kgeNgZPTzIJNkEA0FacJygu', {action: 'donate'}).then(function(token) {  
+  });
+});
+</script

@@ -50,19 +50,22 @@ $(document).ready(function() {
 	grecaptcha.ready(function() {
 	  grecaptcha.execute('6LfzR50UAAAAANj86kgeNgZPTzIJNkEA0FacJygu', {action: 'donate'}).then(function(token) {
 	  	data.token = token;
+
+	  	console.log(data);
+	 	$.post('https://pmvruqtzuf.execute-api.us-east-1.amazonaws.com/prod/', data, function(result) {
+	 		if (result.err) {
+	 			vex.dialog.alert('There was a problem processing with Stripe. Please contact FJ Ministries.');
+	 		}
+	 		else {
+	 			vex.dialog.alert('Stripe processing is complete. Thank you for your donation!')
+	 		}
+	 	}).fail(function(result) {
+	 		console.log(result);
+			vex.dialog.alert('There was a problem processing with Stripe. Please contact FJ Ministries.');
+	 	})
+
 	  });
 	});
- 	
- 	$.post('https://pmvruqtzuf.execute-api.us-east-1.amazonaws.com/prod/', data, function(result) {
- 		if (result.err) {
- 			vex.dialog.alert('There was a problem processing with Stripe. Please contact FJ Ministries.');
- 		}
- 		else {
- 			vex.dialog.alert('Stripe processing is complete. Thank you for your donation!')
- 		}
- 	}).fail(function(result) {
- 		console.log(result);
-		vex.dialog.alert('There was a problem processing with Stripe. Please contact FJ Ministries.');
- 	})
+
  }
  

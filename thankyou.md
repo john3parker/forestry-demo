@@ -25,3 +25,4 @@ Thank you again.
 </div>
 <footer class="blockquote-footer pl-5">Bryan & Tara Riley <cite title="Source Title">FJ Ministries</cite></footer>
 </blockquote>
+<img class="img-fluid img-thumbnail w-25" src="/img/thank-you-2.jpg"/>

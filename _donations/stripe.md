@@ -8,34 +8,69 @@ sub_heading: Donate securely with credit card
 use_content_as_image: true
 ---
 <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
-<script src="https://checkout.stripe.com/checkout.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/vex-js/4.1.0/js/vex.combined.min.js"></script>
-<script>vex.defaultOptions.className = 'vex-theme-os'</script>
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/vex-js/4.1.0/css/vex.min.css"/>
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/vex-js/4.1.0/css/vex-theme-os.min.css"/>
+<img class="w-75" src="/img/stripe.png"/>
+<div id="skus" class="d-flex flex-wrap"></div>
 
-<form id="manualStripe" action="https://pmvruqtzuf.execute-api.us-east-1.amazonaws.com/prod/" method="POST">
- 	<input type="hidden" id="stripeToken" name="stripeToken"/>
- 	<input type="hidden" id="amount" name="amount"/>
-</form>
-<script src="{{ "/js/fjm.stripe.js?v1.0.1" | relative_url }}" type="text/javascript"></script>
-<img src="{{ "img/donation-with-stripe.jpg" | relative_url }}" id="btnDonate" style="cursor: pointer;"/>
-
-<script src="https://www.google.com/recaptcha/api.js?render=6LfzR50UAAAAANj86kgeNgZPTzIJNkEA0FacJygu"></script>
+<script src="https://js.stripe.com/v3"></script>
 <script>
+var ap = ap();
+var sk = g(ur());
 
-$('#manualStripe').submit(function() {
-	event.preventDefault();
-	var stripeToken = $('#stripeToken').val();
-	var amount = $('#amount').val();
-
-	grecaptcha.ready(function() {
-	  grecaptcha.execute('6LfzR50UAAAAANj86kgeNgZPTzIJNkEA0FacJygu', {action: 'donate'}).then(function(token) {
-	  	$('#manualStripe').prepend('<input type="hidden" name="g-recaptcha-response" value="' + token + '">');
-	  	$.post('https://pmvruqtzuf.execute-api.us-east-1.amazonaws.com/prod/', {stripeToken: stripeToken, amount: amount, token: token});
-	  });
-	});
-
+var stripe = Stripe('pk_live_QUqhIKbjYN5t9kYRVYWWHnHW');
+$(document).ready(function() {
+	loadSkus();
 });
 
-</script
+function e(f) {
+  return atob(f);
+}
+
+function checkout(config) {
+	//console.log(config.data);
+	stripe.redirectToCheckout({
+    	items: [
+	      {sku: config.data.id, quantity: 1},
+    	],
+	    successUrl: "{{ "/thankyou/ " | absolute_url }}",
+	    cancelUrl: "{{ "/donate/ " | absolute_url }}"
+	  })
+  	.then(function(result) {
+	    alert(result.error.message);
+	  });
+}
+function ur() {
+	return "YUhSMGNITTZMeTloY0drdWMzUnlhWEJsTG1OdmJTOTJNUzl6YTNWeg";
+}
+function loadSkus() {
+
+	$.ajax({
+		crossDomain: true,
+		type: 'GET',
+		dataType: 'json',
+		beforeSend: function(xhr) {
+			xhr.setRequestHeader(g("QXV0aG9yaXphdGlvbg=="), 'Bearer '+ e(ap) );
+		},
+
+		url: e(sk)
+	}).done(function(result) {
+		console.log(result);
+		result.data.sort((a,b) => (a.price > b.price)?1:-1);
+		for(var x=0; x < result.data.length; x++) {
+			var sku = result.data[x];
+			var btn = $('<button></button>').addClass('btn btn-info m-1').text(Number(sku.price/100).toLocaleString('en-US',{'style':'currency','currency' : 'USD', 'minimumFractionDigits':0, 'maximumFractionDigits': 0}));
+
+			btn.click({id: result.data[x].id}, checkout);
+			$('#skus').append(btn);
+
+		}
+	});
+
+}
+function g(f) {
+  return atob(f);
+}
+function ap() {
+	//return g("YzJ0ZmRHVnpkRjlsU1dJNGMxWjFRalpWZDFwQlYwbDBZbEpUYVhaTE1rMD0");
+	return g("YzJ0ZmJHbDJaVjlOZDJ0cldWZFJRblZEWVZoUFdqWlRlVVZCWjA5Rk9XOD0");
+}
+</script>

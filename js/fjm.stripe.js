@@ -23,8 +23,8 @@ $(document).ready(function() {
 		            }
 		            //console.log('### TEST MODE ###');
 		            var handler = StripeCheckout.configure({
-		            	key: 'pk_live_QUqhIKbjYN5t9kYRVYWWHnHW'
-		            	//key:'pk_test_La2cZOeKLanoVmecpAkb4wEg'
+		            	//key: 'pk_live_QUqhIKbjYN5t9kYRVYWWHnHW'
+		            	key:'pk_test_La2cZOeKLanoVmecpAkb4wEg'
 		            	,locale: 'auto'
 		            	,name: 'FJ Ministries'
 		            	,description: 'One-time donation'
@@ -36,7 +36,7 @@ $(document).ready(function() {
 		            		stripePay(token.id, data.amount);
 		            	}
 		            });
-		            handler.open({amount: Math.round(amount)});
+		            handler.open({amount: Math.round(data.amount)});
 		        }
 		    }
 		});
@@ -49,10 +49,11 @@ $(document).ready(function() {
 
 	grecaptcha.ready(function() {
 	  grecaptcha.execute('6LfzR50UAAAAANj86kgeNgZPTzIJNkEA0FacJygu', {action: 'donate'}).then(function(token) {
-	  	data.token = token;
+	  	data.token = "testdsfsdfsd" + token;
 
 	  	console.log(data);
 	 	$.post('https://pmvruqtzuf.execute-api.us-east-1.amazonaws.com/prod/', data, function(result) {
+	 		console.log(result);
 	 		if (result.err) {
 	 			vex.dialog.alert('There was a problem processing with Stripe. Please contact FJ Ministries.');
 	 		}

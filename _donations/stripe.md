@@ -53,7 +53,7 @@ function loadSkus() {
 
 		url: e(sk)
 	}).done(function(result) {
-		console.log(result);
+		//console.log(result);
 		result.data.sort((a,b) => (a.price > b.price)?1:-1);
 		for(var x=0; x < result.data.length; x++) {
 			var sku = result.data[x];

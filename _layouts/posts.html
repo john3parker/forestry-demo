@@ -2,36 +2,38 @@
 layout: default
 ---
 {% comment %}
-	This layout is used to by posts.md to display all of documents in
-	the _posts/ collection
+  This layout is used to by posts.md to display all of documents in
+  the _posts/ collection
 {% endcomment %}
 
 {% include breadcrumbs.html %}
+<style>
+  .card {border:none;}
+</style>
+<div class="row justify-content-center">
+{% for post in site.posts %}
+  <div class="col-12 col-md-5 col-lg-3 border m-2">
+    <div class="card">
+      <div class="card-body">
+        <h4 class="card-title">
+            <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
+        </h4>        
+      {% assign banner_image = '/img/auction-placeholder.jpg' %}
+      {% if post.banner_image and post.banner_image != ''  %}
+        {% assign banner_image = post.banner_image %}
+      {% endif %}
 
-<div class="container">
-  <div class="row">
-  {% for post in site.posts %}
-    <div class="col-12 col-md-6 col-lg-4">
-      <div class="card">
-        <div class="card-body">
-          <h4 class="card-title">
-              <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
-          </h4>
-          <date>{{ post.date | date_to_string }}</date>
-        {% if post.banner_image and post.banner_image != ''  %}
-          <div class="card-img-top">
-              <a href="{{ post.url | relative_url }}"><img class="img-fluid img-thumbnail" alt="{{ post.title }}" src="{{ post.banner_image | relative_url }}"></a>
-          </div>
-          {% endif %}
-          <p class="card-text">
-              {{ post.content | split:'<!--break-->' | first }}
-              {% if post.content contains '<!--break-->' %}
-                  <a href="{{ post.url | relative_url }}">Read more</a>
-              {% endif %}
-          </p>
+        <div class="card-img-top">
+            <a href="{{ post.url | relative_url }}"><img class="img-fluid img-thumbnail" alt="{{ post.title }}" src="{{ banner_image | relative_url }}"></a>
         </div>
+        <p class="card-text">
+            {{ post.content | split:'<!--break-->' | first }}
+            {% if post.content contains '<!--break-->' %}
+                <a href="{{ post.url | relative_url }}">Read more</a>
+            {% endif %}
+        </p>
       </div>
     </div>
-  {% endfor %}
   </div>
+{% endfor %}
 </div>

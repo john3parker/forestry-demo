@@ -7,6 +7,7 @@ tags: []
 banner_image: "/uploads/2020/siloamspringsdowntown.jpg"
 background-image-stye: "background-position: center;"
 layout: post
+published: false
 ---
 
 # Visions of Future Ministry for FJ Ministries
